@@ -23,21 +23,20 @@ for (int i = 0; i < m; i++)
 return array;
 }
 
-int [] FillArrayForSum (int [,] arr1, int n, int m)
+double [] FillArrayForSum (int [,] arr1, int n, int m)
 {
-int [] arr = new int [n];
+double [] arr = new double [n];
 for (int j = 0; j < /*arr1.*/n/*GetLength(1)*/; j++)
 {
-    int sum = 0;
+    double sum = 0;
     for (int i = 0; i < /*arr1.*/m/*GetLength(0)*/; i++)
     {
         sum = sum + arr1[i,j];
     }
-    arr[j] = sum;
+    Console.Write($"{sum/m} ");
 }
 return arr;
 }
-
 
 Console.Write("Введите число строк массива: ");
 int m = Convert.ToInt32(Console.ReadLine());
@@ -46,6 +45,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 int [,] mas = FillArray(m,n);
 PrintArray(mas);
-
 Console.WriteLine();
-FillArrayForSum(mas, n, m);
+double [] katya = FillArrayForSum(mas, n, m);  
+
+Console.WriteLine(katya[1]);

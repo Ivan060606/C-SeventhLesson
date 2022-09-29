@@ -17,7 +17,7 @@ for (int i = 0; i < m; i++)
 {
     for (int j = 0; j < n; j++)
     {
-        array[i,j] = new Random().Next(1,100) + (Math.Round(new Random().NextDouble(), 2, MidpointRounding.AwayFromZero));
+        array[i,j] = new Random().Next(-99,100) + (Math.Round(new Random().NextDouble(), 2, MidpointRounding.AwayFromZero));
     }    
 }
 return array;

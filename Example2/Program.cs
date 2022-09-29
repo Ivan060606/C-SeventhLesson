@@ -35,7 +35,9 @@ Console.WriteLine();
 
 Console.Write("Введите строку нужного элемента: ");
 int k = Convert.ToInt32(Console.ReadLine());
+k=k-1;
 Console.Write("Введите столбец нужного элемента: ");
 int l = Convert.ToInt32(Console.ReadLine());
+l=l-1;
 if (k<m+1 && l<n+1) Console.Write($"{mas[k,l]}");
 else Console.Write("Нет нужного элемента.");
